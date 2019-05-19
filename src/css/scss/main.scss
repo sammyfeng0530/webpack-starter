@@ -1,0 +1,28 @@
+$my-favorite-color: #fff000;
+
+@mixin text-setting(){
+  color:#fff;
+  text-align: center;
+};
+
+*{
+  @include text-setting;
+}
+html{
+  background-image: url("../images/bg.png"); // 这里是要导入到style.scss 文件中的，所以路径以style.scss文件为标准
+}
+
+body{
+  background-color: rgba(255,255,255,.6);
+}
+
+.container{
+  background-color: rgba(0,0,0,.6);
+}
+
+.style-scss-test{
+  color: $my-favorite-color;
+  &:hover{
+    transform: scaleX(3);
+  }
+}
